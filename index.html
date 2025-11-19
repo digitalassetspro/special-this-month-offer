@@ -373,6 +373,7 @@
             const videoRef = useRef(null);
             useEffect(() => {
                 if (videoRef.current) {
+                    videoRef.current.muted = true;
                     videoRef.current.play().catch(e => console.log("Autoplay prevented", e));
                 }
             }, []);
@@ -397,10 +398,11 @@
         };
 
         const VideoShowcaseSection = () => {
+            // NOTE: To use your own videos, upload them to WordPress and replace these URLs.
             const videos = [
-                { id: 1, src: "https://drive.google.com/uc?export=download&id=1J6_-_tSWO_eNziGVY3CuaY-tArMJhTjQ", label: "Luxury & Lifestyle", tag: "VIRAL HOOKS", delay: 0 },
-                { id: 2, src: "https://drive.google.com/uc?export=download&id=1d9OhcESucrzC3p1IiQwO2mqrxxWPYKWu", label: "Motivation & Fitness", tag: "HIGH RETENTION", delay: 200 },
-                { id: 3, src: "https://drive.google.com/uc?export=download&id=1MzPN9szXbKrIOeYJgO7XO5oJ06tClnrP", label: "Satisfying & VFX", tag: "4K QUALITY", delay: 400 }
+                { id: 1, src: "https://raw.githubusercontent.com/digitalassetspro/special-this-month-offer/d57cc0442ccfc686fe14c7e3f0d7547bedec4049/319974431_3169361143361518_6105132591057930893_n.mp4", label: "Luxury & Lifestyle", tag: "VIRAL HOOKS", delay: 0 },
+                { id: 2, src: "https://raw.githubusercontent.com/digitalassetspro/special-this-month-offer/d57cc0442ccfc686fe14c7e3f0d7547bedec4049/317032313_1509589559577716_217053824126591327_n.mp4", label: "Motivation & Fitness", tag: "HIGH RETENTION", delay: 200 },
+                { id: 3, src: "https://raw.githubusercontent.com/digitalassetspro/special-this-month-offer/d57cc0442ccfc686fe14c7e3f0d7547bedec4049/122428032_250139534418831_7481158972881171494_n.mp4", label: "Satisfying & VFX", tag: "4K QUALITY", delay: 400 }
             ];
             return (
                 <section className="py-20 bg-gray-950 relative overflow-hidden border-t border-gray-900">
@@ -649,8 +651,8 @@
             const data = [
                 { followers: "10K", earnings: "₹5,000 – ₹30,000", how: "Brand deals + digital selling" },
                 { followers: "50K", earnings: "₹20,000 – ₹80,000", how: "Affiliate + paid reels" },
-                { followers: "100K", earnings: "₹50,000 – ₹3,00,000", how: "UGC + brand partnerships" },
-                { followers: "500K", earnings: "₹1,00,000+", how: "Viral reels + product funnels" }
+                { followers: "100K", earnings: "₹50,000 – ₹3,00,000", how: "UGC + brand ads" },
+                { followers: "500K", earnings: "₹1,00,000 – ₹10,00,000+", how: "Viral reels + product sales" }
             ];
             return (
                 <section className="py-20 bg-black relative overflow-hidden">
@@ -989,3 +991,4 @@
     </script>
 </body>
 </html>
+    
